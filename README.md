@@ -74,3 +74,20 @@ try:
     sam.tiff_to_gpkg('segment_maptiler.tif', result, simplify_tolerance=None)
 except Exception as e:
     print(f"An error occurred during segmentation or GeoPackage conversion: {e}")
+
+##Aplicaciones
+
+###  Monitoreo Ambiental: Segmentación de áreas forestales, cuerpos de agua y zonas urbanas.
+### Agricultura de Precisión: Identificación y clasificación de diferentes cultivos y su estado.
+### Gestión de Desastres: Análisis de áreas afectadas por incendios, inundaciones u otros desastres naturales.
+### Planificación Urbana: Evaluación del uso del suelo y desarrollo de infraestructuras.
+
+## Contribuciones
+Las contribuciones son bienvenidas. Por favor, realiza un fork del repositorio y envía un pull request con tus mejoras.
+
+## Licencia
+Este proyecto está bajo la Licencia MIT. Consulta el archivo LICENSE para más detalles.
+
+## Contacto
+Para cualquier pregunta o comentario, por favor contacta a alexanderariza@gmail.com.
+
