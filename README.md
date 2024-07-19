@@ -53,3 +53,41 @@ try:
     tms_to_geotiff(output=image, bbox=bbox, zoom=zoom, source=tms_url)
 except Exception as e:
     print(f"An error occurred: {e}")
+
+## Generación de Segmentación
+### Usa SAM para generar una segmentación de la imagen y convertirla a GeoPackage.
+
+# Inicializar SAM con el modelo preentrenado y parámetros
+sam = SamGeo(
+    checkpoint='sam_vit_h_4b8939.pth',  # Ruta al archivo del modelo
+    model_type='vit_h',                 # Tipo de modelo
+    device='cuda',                      # Dispositivo (puede ser 'cpu' o 'cuda')
+    erosion_kernel=(3, 3),              # Parámetro de erosión para el procesamiento de imágenes
+    mask_multiplier=255,                # Multiplicador para las máscaras
+    sam_kwargs=None,
+)
+
+# Generar la segmentación de la imagen
+try:
+    sam.generate(image, 'segment_maptiler.tif')
+    # Convertir la imagen segmentada a GeoPackage
+    sam.tiff_to_gpkg('segment_maptiler.tif', result, simplify_tolerance=None)
+except Exception as e:
+    print(f"An error occurred during segmentation or GeoPackage conversion: {e}")
+
+##Aplicaciones
+
+###  Monitoreo Ambiental: Segmentación de áreas forestales, cuerpos de agua y zonas urbanas.
+### Agricultura de Precisión: Identificación y clasificación de diferentes cultivos y su estado.
+### Gestión de Desastres: Análisis de áreas afectadas por incendios, inundaciones u otros desastres naturales.
+### Planificación Urbana: Evaluación del uso del suelo y desarrollo de infraestructuras.
+
+## Contribuciones
+Las contribuciones son bienvenidas. Por favor, realiza un fork del repositorio y envía un pull request con tus mejoras.
+
+## Licencia
+Este proyecto está bajo la Licencia MIT. Consulta el archivo LICENSE para más detalles.
+
+## Contacto
+Para cualquier pregunta o comentario, por favor contacta a alexanderariza@gmail.com.
+
