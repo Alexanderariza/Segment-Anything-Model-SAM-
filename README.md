@@ -73,7 +73,7 @@ try:
     # Convertir la imagen segmentada a GeoPackage
     sam.tiff_to_gpkg('segment_maptiler.tif', result, simplify_tolerance=None)
 except Exception as e:
-    print(f"An error occurred during segmentation or GeoPackage conversion: {e}")
+    print(f"An error occurred during segmentation or GeoPackage conversion: {e}").
 
 ##Aplicaciones
 
