@@ -29,10 +29,10 @@ El Segment Anything Model (SAM) es un modelo avanzado de segmentación de imáge
 
 ## Aplicaciones
 
-###  Monitoreo Ambiental: Segmentación de áreas forestales, cuerpos de agua y zonas urbanas.
-### Agricultura de Precisión: Identificación y clasificación de diferentes cultivos y su estado.
-### Gestión de Desastres: Análisis de áreas afectadas por incendios, inundaciones u otros desastres naturales.
-### Planificación Urbana: Evaluación del uso del suelo y desarrollo de infraestructuras.
+- **Monitoreo Ambiental**: Segmentación de áreas forestales, cuerpos de agua y zonas urbanas.
+- **Agricultura de Precisión**: Identificación y clasificación de diferentes cultivos y su estado.
+- **Gestión de Desastres**: Análisis de áreas afectadas por incendios, inundaciones u otros desastres naturales.
+- **Planificación Urbana**: Evaluación del uso del suelo y desarrollo de infraestructuras.
 
 ## Contribuciones
 Las contribuciones son bienvenidas. Por favor, realiza un fork del repositorio y envía un pull request con tus mejoras.
